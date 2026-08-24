@@ -24,4 +24,12 @@ public class Product
         Price = price;
         StockQuantity = stockQuantity;
     }
+
+    public void ReduceStock(int quantity)
+    {
+        if (quantity > StockQuantity)
+            throw new ArgumentException($"Not enough stock for product '{Name}'.");
+
+        StockQuantity -= quantity;
+    }
 }

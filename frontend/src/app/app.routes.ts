@@ -4,10 +4,6 @@ import { Login } from './features/auth/pages/login/login';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/products', pathMatch: 'full' },
-  { path: '', component: ProductList, children : [
-    {
-
-    }
-  ] },
+  { path: 'products', component: ProductList },
   { path: 'login', component: Login }
 ];
